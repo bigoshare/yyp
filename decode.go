@@ -138,7 +138,7 @@ func (e *DecodeState) ReadSlice(v interface{}) error {
 	elem := rv.Elem()
 
 	len := e.ReadU32()
-	if len > 10000 {
+	if len > 1000000 {
 		println("slice len too long: ", len)
 		panic("slice len too long")
 	}
